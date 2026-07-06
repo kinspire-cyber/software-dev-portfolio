@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 💻 01 — Software Development Projects
 
 > **Python apps, CLI tools, automation, and AI solutions.**
@@ -84,3 +85,7 @@ git push -u origin main
 > 📌 **Rule:** Every project gets its own README before it's "done."
 
 Made with ❤️ by Kingsley Onyema
+=======
+# software-dev-portfolio
+🐍 Python developer portfolio — CLI tools, automation, and AI solutions built while learning. By Kingsley Onyema (@kinspiretech)
+>>>>>>> 804131da72a616634211852a54e0f5e1118c57cd
