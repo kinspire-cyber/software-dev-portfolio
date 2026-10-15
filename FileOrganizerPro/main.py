@@ -48,23 +48,36 @@ def organize_folder(folder_path):
         try:
             # Step 6: Move the file (your step 4)
             # Print first, then move!
-            print(f"Moving {file_path.name} → {category}/")
+            print(f"Moving {file_path.name} -> {category}/")
             shutil.move(file_path, dest_file)
 
             category_counts[category] = category_counts.get(category, 0) + 1
         except Exception as e:
-            print(f"❌ Error moving {file_path.name}: {e}")
+            print(f"Error moving {file_path.name}: {e}")
 
-    # NEW: Print summary report
+    # Print summary report
     print("\n" + "=" * 40)
-    print("📊 ORGANIZATION COMPLETE!")
+    print("ORGANIZATION COMPLETE!")
     print("=" * 40)
     total = sum(category_counts.values())
-    print(f"✅ Total files moved: {total}")
-    print(f"📁 Categories used: {len(category_counts)}\n")
+    print(f"Total files moved: {total}")
+    print(f"Categories used: {len(category_counts)}\n")
     print("Breakdown:")
     for cat, count in category_counts.items():
-        print(f"   • {cat}: {count} file(s)")
+        print(f"   - {cat}: {count} file(s)")
     print("=" * 40)
 
-organize_folder("test_folder")
+
+# Ask user for the folder they want to organise
+
+user_folder = input("Enter the folder name or full path: ").strip()
+folder_path = Path(user_folder)
+
+if folder_path.exists():
+    organize_folder(user_folder)
+else:
+    print(f"Error: Folder '{user_folder}' does not exist!")
+    print("Tip: Check the spelling or use a full path like C:\\Users\\...\\Downloads")
+
+# Keeps the window open when run by double-clicking
+input("\nPress Enter to exit...")

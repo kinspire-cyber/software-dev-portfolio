@@ -26,6 +26,8 @@ Tired of drowning in a messy Downloads folder? File Organizer Pro scans any fold
 ## ✨ Features
 
 - ✅ **7 smart categories** — Automatically detects file types by extension
+- ✅ **Interactive prompt** — Just run and type the folder name when asked
+- ✅ **Smart validation** — Catches typos and missing folders with helpful errors
 - ✅ **Safe by default** — Built-in error handling won't crash on bad files
 - ✅ **Detailed summary** — See exactly what was moved and where
 - ✅ **No external dependencies** — Uses only Python standard library
@@ -39,11 +41,11 @@ Tired of drowning in a messy Downloads folder? File Organizer Pro scans any fold
 1. Make sure you have **Python 3.8 or higher** installed
 2. Clone this repository:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/file-organizer-pro.git
+   git clone https://github.com/kinspire-cyber/software-dev-portfolio.git
    ```
 3. Navigate to the project folder:
    ```bash
-   cd file-organizer-pro
+   cd software-dev-portfolio/FileOrganizerPro
    ```
 
 That's it! No `pip install` needed — it uses only built-in Python libraries.
@@ -52,13 +54,19 @@ That's it! No `pip install` needed — it uses only built-in Python libraries.
 
 ## 🚀 Usage
 
-1. **Create a folder** with files you want to organize (or use the included `test_folder/`)
-2. **Edit `main.py`** and change `"test_folder"` to your folder name on the last line
-3. **Run the program:**
+1. **Run the program:**
    ```bash
    python main.py
    ```
-4. **Watch the magic happen!** ✨
+2. **Type the folder name** (or full path) when prompted:
+   ```
+   Enter the folder name or full path: Downloads
+   ```
+3. **Watch the magic happen!** ✨
+
+### 💡 You can use either:
+- **Relative path:** `Downloads` or `test_folder`
+- **Full path:** `C:\Users\YourName\Downloads` (Windows) or `/home/user/Downloads` (Mac/Linux)
 
 ### Example Output:
 
@@ -127,9 +135,10 @@ No fancy AI, no heavy dependencies — just clean Python code solving a real pro
 ## 🗺️ Roadmap
 
 - [x] **v1.0** — Type-based organization ✅ *(Released)*
-- [ ] **v1.1** — Date-based organization (Year/Month folders)
-- [ ] **v1.2** — Custom rules & configuration file (JSON)
-- [ ] **v1.3** — Dry-run mode (preview before moving)
+- [x] **v1.1** — Interactive user input & folder validation ✅ *(Released)*
+- [ ] **v1.2** — Date-based organization (Year/Month folders)
+- [ ] **v1.3** — Custom rules & configuration file (JSON)
+- [ ] **v1.4** — Dry-run mode (preview before moving)
 - [ ] **v2.0** — Desktop GUI with Tkinter
 - [ ] **v2.1** — Convert to standalone .exe (PyInstaller)
 - [ ] **v3.0** — Cloud sync & plugin system
